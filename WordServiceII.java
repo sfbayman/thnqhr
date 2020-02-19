@@ -1,12 +1,11 @@
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class WordServiceII {
-  private List<String> words = new ArrayList<>();
+  private List<String> words;
 
   WordServiceII() {
     words = loadWords("words_alpha.txt");
@@ -32,7 +31,7 @@ public class WordServiceII {
     return null;
   }
 
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args) {
     WordServiceII wordService = new WordServiceII();
     System.out.println(wordService.getRandomWord());
   }
